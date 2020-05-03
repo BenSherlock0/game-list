@@ -1,9 +1,9 @@
 
 interface RAWGResponse{
-    Name:string;
-    Description:string;
-    Released:string;
-    Background_Image:string;
+    name:string;
+    description:string;
+    released:string;
+    background_image:string;
     Error:string;
 
 }

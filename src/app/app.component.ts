@@ -22,7 +22,7 @@ export class AppComponent {
     this._rawgService.getGameData(gameName).subscribe(
       gameData => {
           this.gameData=gameData;
-          console.log('Title:' + this.gameData.Name)
+          console.log('Title:' + this.gameData.name)
       },
       error => this.errorMessage = <any>error
     );

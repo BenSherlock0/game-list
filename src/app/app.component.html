@@ -1,8 +1,28 @@
-<div class='container'>
+<div class="container">
   <h1>Game Finder</h1>
   <form>
     <div class="form-group">
-      <input type='text' name='game-name' class="form-control" #gamename='Enter Game Name'>
+      <input type='text' name='game-name' class="form-control" #gamename placeholder='Enter Game Name'>
     </div>
+    <button (click)="getGameDetails(gamename.value)" type="submit" class='btn btn-primary'>Get Game Details</button>
   </form>
+
+  <div class="row bg-light mt-4 p-4" *ngIf="gameData">
+    <div class="col-sm-4">
+      <div>
+        <h3>{{gameData.Error}}</h3>
+      </div>
+      
+    </div>
+    <div class="col-sm-8">
+      <div *ngIf="gameData.name">
+        <h1>{{gameData.name}}</h1>
+        <h2>{{gameData.released}}</h2>
+        <br>{{gameData.description}}
+      </div>
+      <div *ngIf="gameData.name">
+        <img src="{{gameData.background_image}}">
+      </div>
+    </div>
+  </div>
 </div>
