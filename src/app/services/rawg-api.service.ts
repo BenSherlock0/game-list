@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Observable } from 'rxjs';
 import { catchError,tap } from 'rxjs/operators';
-import {AngularFirestoreCollection, AngularFirestore} from "@angular/fire/firestore";
-import {IGame} from "../Interface/game"
+//import {AngularFirestoreCollection, AngularFirestore} from "@angular/fire/firestore";
+//import {IGame} from "../Interface/game"
 
 
 @Injectable({
@@ -14,16 +14,16 @@ export class RawgApiService {
   private _siteURL="https://api.rawg.io/api/";
   private _key='games/';
 
-  gamesDataCollection:AngularFirestoreCollection<IGame>;
+  //gamesDataCollection:AngularFirestoreCollection<IGame>;
 
-  gamesData:Observable<IGame[]>;
+  //gamesData:Observable<IGame[]>;
 
-  allGameData:IGame[];
+  //allGameData:IGame[];
 
   errorMessage:string;
 
-  constructor(private _https:HttpClient,private _afs:AngularFirestore) {
-    this.gamesDataCollection=_afs.collection<IGame>("Game_Data");
+  constructor(private _https:HttpClient) {
+    //this.gamesDataCollection=_afs.collection<IGame>("Game_Data");
    }
 
   getGameData(gameName): Observable<RAWGResponse>{

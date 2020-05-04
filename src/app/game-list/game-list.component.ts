@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RawgApiService } from '../services/rawg-api.service';
-import { IGame,Game} from "../Interface/game"
+//import { IGame,Game} from "../Interface/game"
 
 @Component({
   selector: 'app-game-list',
@@ -9,7 +9,7 @@ import { IGame,Game} from "../Interface/game"
   providers: [RawgApiService]
 })
 export class GameListComponent implements OnInit {
-  gameData: IGame[];
+  //gameData: IGame[];
   constructor(private _rawgAPIService:RawgApiService) { }
 
   ngOnInit() {

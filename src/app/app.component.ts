@@ -10,6 +10,7 @@ import { RawgApiService } from './services/rawg-api.service';
 
 export class AppComponent {
   
+  GameImageWidth:number=300;
 
   gameData:RAWGResponse;
   errorMessage:any;

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {IGame} from "../Interface/game"
+//import {IGame} from "../Interface/game"
 
 @Component({
   selector: 'app-game',
@@ -8,8 +8,8 @@ import {IGame} from "../Interface/game"
 })
 export class GameComponent implements OnInit {
 
-  @Input() gameData:IGame;
-  GameImageWigth:number=300
+  //@Input() gameData:IGame;
+  GameImageWidth:number=300;
 
   constructor() { }
 
