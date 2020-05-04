@@ -7,10 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularFirestoreModule} from '@angular/fire/firestore';
 import { AngularFireModule} from "@angular/fire";
 import { environment} from "../environments/environment";
+import { GameComponent } from './game/game.component';
+import { GameListComponent } from './game-list/game-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GameComponent,
+    GameListComponent
   ],
   imports: [
     BrowserModule,
